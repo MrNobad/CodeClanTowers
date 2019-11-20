@@ -14,7 +14,17 @@ public class Conference {
 
     }
 
+    public int guestCount() {
+        return this.guests.size();
+    }
 
+    public void addGuests(Guest guest){
+        this.guests.add(guest);
+    }
+
+    public void removeGuests(Guest guests) {
+        this.guests.clear();
+    }
 
 
 
