@@ -12,7 +12,7 @@ public class RoomTest {
 
     public void before(){
         guests = new Guest("Bob");
-        room = new Room(2, 3, "Single");
+        room = new Room(2, 3, "Single", 100);
     }
 
     @Test

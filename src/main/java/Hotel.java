@@ -8,9 +8,7 @@ public class Hotel {
     public Hotel(){
         this.rooms = new ArrayList<Room>();
         this.conferences = new ArrayList<Conference>();
-
     }
-
 
     public void addRoom(Room room) {
         rooms.add(room);
@@ -27,4 +25,19 @@ public class Hotel {
     public int conferenceCount() {
         return conferences.size();
     }
+
+    public Booking bookRoom(Room room, Integer nights) {
+        return new Booking(room, nights);
+    }
+    public ArrayList findVacantRooms() {
+        ArrayList<Room> result = new ArrayList<Room>();
+        for (Room room:rooms) {
+            if (room.guestCount() == 0) {
+                result.add(room);
+            }
+        }
+        return result;
+    }
+
+
 }
