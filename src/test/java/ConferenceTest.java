@@ -19,7 +19,10 @@ public class ConferenceTest {
     @Test
     public void addGuest(){
         conference.addGuests(guest);
-        assertEquals(1, conference.guestCount());
+        conference.addGuests(guest);
+        conference.addGuests(guest);
+        conference.addGuests(guest);
+        assertEquals(3, conference.guestCount());
     }
 
     @Test
