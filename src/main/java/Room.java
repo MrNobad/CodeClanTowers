@@ -20,8 +20,10 @@ public class Room {
         return this.guests.size();
     }
 
-    public void addGuests(Guest guest){
-        this.guests.add(guest);
+    public void addGuests(Guest guest) {
+        if (this.guests.size() < this.capacity) {
+            this.guests.add(guest);
+        }
     }
 
     public void removeGuests(Guest guests) {
